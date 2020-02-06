@@ -1,0 +1,11 @@
+version: '3'
+services:
+  go:
+    build:
+      context: ./
+    image: aws-cost-notification
+    environment:
+      - AWS_ACCESS_KEY_ID
+      - AWS_SECRET_ACCESS_KEY
+      - SLACK_TOKEN
+    command: -prefix 俺のAWS -channel aws-cost-notification-test
